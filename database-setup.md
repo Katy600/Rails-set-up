@@ -1,4 +1,12 @@
 # Set up your database.
+## Five Steps
+1. Brew install mysql
+2. mysql.server start
+3. mysql secure installation
+    Set password
+4. mysql -u root -p
+5. brew services start mysql 
+
 ### In the terminal type...
 Log in as root user, u space root, and then dash p for my password option. Type in your secret password. Now you are logged into mysql.
 ```
@@ -50,7 +58,7 @@ GRANT space ALL space PRIVILEGES, make sure you spell privileges correctly, spac
 
 It can be absolutely any name that you want. I'm gonna call it rails_user, so the rails_user, and then close those single quotes, put an at sign and then in single quotes write localhost, again single quotes. That's going to tell it that it'll be a locally connecting user, not someone connecting from another IP address somewhere else and then a space and IDENTIFIED BY and then in single quotes the password that we want to use. I'm just gonna use password.
 
- It'll now grant those privileges so that rails_user can now connect to all the tables on the simple_cms_development database.
+It'll now grant those privileges so that rails_user can now connect to all the tables on the simple_cms_development database.
 
 ### And now for the test version
 
