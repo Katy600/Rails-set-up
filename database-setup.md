@@ -1,11 +1,12 @@
 # Set up your database.
-### In the terminal type.
+### In the terminal type...
+Log in as root user, u space root, and then dash p for my password option. Type in your secret password. Now you are logged into mysql.
 ```
 mysql -u root -p
 ```
-
 Enter password - blank
 ### You should see.
+
 ```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 15
@@ -93,5 +94,6 @@ Mysql2::Error: Access denied for user 'rails_user'@'localhost' (using password: 
 ```
 GRANT ALL PRIVILEGES ON demo_project_development.* to rails_user@localhost IDENTIFIED BY 'password';
     FLUSH PRIVILEGES;
-
 ```
+
+ If you look inside your db directory, you will see a new schema file has been created. There's nothing in there, it's empty, but it was able to connect to the database successfully. If you got an error, then you need to make sure that your database is running, that mysqul is running, that you've created those databases, and that you've granted privileges to the right user with the correct password and then provided those to the configuration. If all those things are true you should be able to connect to the database just like this.
