@@ -1,5 +1,7 @@
 # How server requests are handled
 
+![alt text](https://recipe4developer.files.wordpress.com/2011/09/image.png)
+
 #### A request originates with the browser
 it goes to the Web server for processing. In our case, in development, that's going to be the Puma Web server, but it can also be the Apache, NGINX, or any other kind of Web server.
 
