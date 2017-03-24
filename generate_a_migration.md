@@ -36,7 +36,7 @@ end
 
 ```
 
-When we run our migrations, Rails is going execute the code that's inside our up or our down methods. *Up* will *describe the changes we want to make to the current database*. *Down* will *describe how to reverse those changes*, to undo the code that's in the up method. They're gonna be *mirror images of each other*. If the *up method creates a new database table*, then we would expect the *down method would delete or drop that table*.
+When we run our migrations, Rails is going execute the code that's inside our up or our down methods. *Up* will **describe the changes we want to make to the current database**. **Down** will **describe how to reverse those changes**, to undo the code that's in the up method. They're gonna be *mirror images of each other*. If the *up method creates a new database table*, then we would expect the *down method would delete or drop that table*.
 
 The *change method* is a *shorthand which allows us to write only the up code, and then let Rails try to reverse those actions*. For example if we create a new database table, Rails is smart enough to realize that the reverse of creating a table is dropping that same table. Not all actions can be automatically reversed though. In which case, you can't use change. You would have to use these explicit up and down methods.
 
