@@ -194,4 +194,12 @@ subject pages.size again,
  => 1
 ```
 
-and you'll see that now it's equal to one. And last of all, let's look at this from the other side of things. Let's take our first page and ask for its subject, and you'll see that it works exactly the same way as it did for the one-to-one relationship. A first page knows what its subject is. On your own, try adding the one-to-many association that we need for page and section. Page has_many sections, and section belongs_to page.
+and you'll see that now it's equal to one. And last of all, let's look at this from the other side of things. Let's take our first page and ask for its subject,
+
+```
+2.2.3 :021 > first_page.subject
+ => #<Subject id: 1, name: "Initial Subject", position: 1, visible: true, created_at: "2017-03-24 15:25:18", updated_at: "2017-03-27 07:40:21">
+2.2.3 :022 >
+```
+
+ and you'll see that it works exactly the same way as it did for the one-to-one relationship. A first page knows what its subject is. On your own, try adding the one-to-many association that we need for page and section. Page has_many sections, and section belongs_to page.
