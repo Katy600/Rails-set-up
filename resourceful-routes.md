@@ -174,6 +174,25 @@ So we have index, show, new, create, edit, update, delete, and destroy, and **we
 ```
 rails routes
 ```
- and hit return, and it'll go through and it'll tell us all the routes that it knows about, every mapping that we have. It can be very useful, especially when working with resourceful routes. So here we are, you see it has a verb here, listed to tell us what they are. And here's our subjects. Right, here's each one. Let's notice for example that we've got our index action here.
+and hit return, and it'll go through and it'll tell us all the routes that it knows about, every mapping that we have.
+```
+katymccann (master *) config $ rails routes
+          Prefix Verb   URI Pattern                    Controller#Action
+            root GET    /                              demo#index
+  delete_subject GET    /subjects/:id/delete(.:format) subjects#delete
+        subjects GET    /subjects(.:format)            subjects#index
+                 POST   /subjects(.:format)            subjects#create
+     new_subject GET    /subjects/new(.:format)        subjects#new
+    edit_subject GET    /subjects/:id/edit(.:format)   subjects#edit
+         subject GET    /subjects/:id(.:format)        subjects#show
+                 PATCH  /subjects/:id(.:format)        subjects#update
+                 PUT    /subjects/:id(.:format)        subjects#update
+                 DELETE /subjects/:id(.:format)        subjects#destroy
+      demo_hello GET    /demo/hello(.:format)          demo#hello
+      demo_index GET    /demo/index(.:format)          demo#index
+demo_other_hello GET    /demo/other_hello(.:format)    demo#other_hello
+      demo_lynda GET    /demo/lynda(.:format)          demo#lynda
+```
+It can be very useful, especially when working with resourceful routes. So here we are, you see it has a verb here, listed to tell us what they are. And here's our subjects. Right, here's each one. Let's notice for example that we've got our index action here.
 
 It's a GET request for subjects. If we want to update a subject, then we have a patch request for subjects/:id and that then goes to subjects#update. So that can be a helpful reminder if you forget exactly how these routes lay out. In addition to remembering these, Rails also gives us some resourceful URL helpers to help you out. Let's take a look at those in the next movie.
