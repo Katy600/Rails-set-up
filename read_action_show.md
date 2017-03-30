@@ -120,8 +120,39 @@ So that's how I find out the current ID, I'm then going to ask the database to r
 
 ```
 
+which is what will be rendered by default, and inside this show template I'm going to paste some more HTML.
+```
+<%= link_to("<< Back to Link", subject_path, :class => 'back-link') %>
 
-which is what will be rendered by default, and inside this show template I'm going to paste some more HTML. Remember you can pause the movie if you want to copy it down. Let's talk about what's in here. I've got a link at the top that says back to list. And where is it gonna take me? It's gonna take me back to that index page. This is the URL helper that will help me to do that.
+<div class="subjects show">
+  <h2>Subject</h2>
+  <%= link_to('Add new subject', '#', :class => 'action new')%>
+
+  <table summary="Subject detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @subject.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @subject.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @subject.visible ? true : false %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @subject.created_at %></td>
+    </tr>
+    <tr>
+      <th>updated_at</th>
+      <td><%= @subject.updated_at %></td>
+    </tr>
+  </table>
+</div>
+```
+I've got a link at the top that says back to list. And where is it gonna take me? It's gonna take me back to that index page. This is the URL helper that will help me to do that.
 
 The URL is just /subjects, but this is the URL helper that does the same thing. Then after that I've got a title here that just says show subject and then I've got another table that's going to just list off the attributes of this subject. I've got its name, its position, whether or not it's visible, once again I'm using that ternary operator to do that, and then it's gonna display created at and updated at. It's similar to what we had in the index template, we're just not going to have a list. It's not a list anymore, just gonna be looking at one single item, not an array of items.
 
