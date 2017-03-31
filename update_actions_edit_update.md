@@ -258,7 +258,14 @@ We need to send in a hash, and **we could use params subject**, and that would g
  @subject.update_attributes(subject_params)
  ```
 
-  and now we can remove this line. It's going to update it with values that we've allowed to be mass assigned. Just as a refresher, remember that we have subject params down here, that handles params, it makes sure that there's a subject, and it permits the name, the position, and visible.
+and now we can remove this line. It's going to update it with values that we've allowed to be mass assigned. Just as a refresher, ***remember that we have subject params down here***
+
+```
+def subject_params
+    params.require(:subject).permit(:name, :position, :visible)
+  end
+```
+that handles params, it makes sure that there's a subject, and it permits the name, the position, and visible.
 
 Now, if the save succeeds, we probably don't want to redirect back to the index action. In this case, let's redirect back to the show action instead. What is the path for the show action? Its subject path, and then at subject. Once we successfully updated in object, we will go back to its detailed view, and take a look at that, but if the save fails, then we want to redisplay the form. The form, remember, is our edit template, so we're going to change this to edit, let's save it, and let's try it out. Let's come back over here to this page, and let's change it from test subject position four, let's make it position five.
 
