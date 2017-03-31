@@ -117,7 +117,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.new(subject_params)
 
     if @subject.save
-      redirect_to(subject_path)
+      redirect_to(subjects_path)
     else
       render('new')
     end
