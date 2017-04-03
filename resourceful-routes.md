@@ -32,7 +32,6 @@ All we have to do is **put resources, and then, as a symbol, the plural name of 
 |GET|/subjects/:id/delete|delete|Show delete form for item with :id|
 |DELETE|/subjects/:id|destroy|Delete item with :id
 
-
 Notice that the controller name and the ID are still in the URL. However, the action names are mostly gone. And that's because the HTTP methods are largely going to determine the action.
 
 A route is now a combination of the URL and that HTTP verb that goes with it. For example, **show, update, and destroy all have the exact same URL**. Notice that **it's the HTTP method, GET, PATCH, and DELETE, that makes the difference**. And the same thing is true for **index and create**. They have the **same URL**. It's the ***verb that makes the difference***. The ones that do **still show an action, new, edit, and delete, are really just conveniences for us to have a place to compose our changes in our browser**.
