@@ -22,7 +22,7 @@ resources :sections
 All we have to do is **put resources, and then, as a symbol, the plural name of the resource that we want to work with**. So resources :subjects, resources :pages, and resources :sections. **That shortcut creates standard routes, which map to our CRUD actions using REST HTTP verbs**. Let's take a look at the routes that it defines for us.  
 
 | **HTTP Verb**|**URL**| **Action**| **Description** |
-|:------------:|:---------:||:--------:|:---------------:|
+|:------------:|:---------:|:--------:|:------------:|
 |GET|/subjects|index|show all items|
 |GET|/subjects/:id|show|Show items with :id|
 |GET|/subjects/new|new|Show new form|
